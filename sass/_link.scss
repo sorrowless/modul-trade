@@ -1,0 +1,129 @@
+.tipycal_btn{
+	vertical-align: middle;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	@include border-radius(16px);
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+	font-weight: normal;
+	border: solid 1px;
+	outline: none;
+	color: #ffffff;
+	line-height: 20px;
+	padding: 5px 15px;
+	text-align: center;
+
+	@media(max-width: $mobile){
+		width: 100%;
+	}
+}
+
+.along_btn{
+	min-width: 255px;
+}
+
+
+
+
+a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
+	@include transition(all 0.2s ease-out 0.1s);
+	font-size: 14px;
+	line-height: 18px;
+
+
+	&.green_btn{
+		@extend .tipycal_btn;
+		border-color: $active_color;
+		color: $active_color;
+		background: transparent;
+
+		&.account_block__out{			
+			line-height: 16px;
+			padding: 5px 10px;
+			@media(max-width: $mobile){
+				margin-top: 10px;
+				max-width: 280px;
+			}
+		}
+		
+	}
+	&.blue_btn{
+		@extend .tipycal_btn;
+		border-color: $dop_active;
+		color: $dop_active;
+		background: transparent;
+		
+	}
+
+	&.gray_btn{
+		@extend .tipycal_btn;
+		border-color: $text_color;
+		color: $text_color;
+		background: transparent;
+		
+	}
+
+	&.red_btn{
+		@extend .tipycal_btn;
+		border-color: $error_color;
+		color: $error_color;
+		background: transparent;
+		
+	}
+
+	&.account_block__mail{
+		line-height: 28px;
+		font-size: 16px;
+		color: $dop_active;
+		text-decoration: none;
+		margin:  0 10px;
+	}
+
+	&.referral__link{
+		font-size: 17px;
+		padding: 5px 0;
+		color: $text_color;
+		line-height: 22px;
+		display: block;
+		text-decoration: none;
+	}
+
+}
+
+a:hover, button:hover, input[type="submit"]{
+	&.green_btn{
+		background: $active_color;
+		color: #ffffff;
+		
+	}
+	&.blue_btn{
+		background: $dop_active;
+		color: #ffffff;
+		
+	}
+	&.gray_btn{
+		background: $text_color;
+		color: #ffffff;
+	}
+
+	&.red_btn{
+		background: $error_color;
+		color: #ffffff;
+	}
+
+	&.account_block__mail{
+		text-decoration: $active_color;
+	}
+
+	&.referral__link{
+		text-decoration: underline;
+	}
+}
+
+a:active, button:active, input[type="submit"] {
+	// color: $text-dark; 
+
+}
+
+
