@@ -239,7 +239,7 @@
 }
 
 .canscel{
-	border-top: solid 1px #e7e7e7;
+	border-top: solid 1px $light_bd;
 	margin: 0 0 - $standart_padd_row;
 	padding: 40px $standart_padd_row;
 	padding-bottom: 0;
@@ -482,7 +482,7 @@
 		padding: 0 20px;
 		padding-top: 40px;
 		margin-top: 40px;
-		border-top: solid 1px #e7e7e7;
+		border-top: solid 1px $light_bd;
 	}
 }
 
@@ -557,4 +557,8 @@
 		background: rgba(255, 255, 255, 0.95);
 		@include box-shadow(0 0 5px $bxsh_color);
 	}
+}
+
+.darck_bg{
+	background: $title_color;
 }

@@ -18,12 +18,25 @@
 		width: 100%;
 	}
 }
+.index_btn{
+	@extend .tipycal_btn;		
+	color: #ffffff;
+	width: 320px;
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+	font-size: 24px;
+	line-height: 30px;
+	padding: 20px 15px;
+	font-weight: bold;
+	@include border-radius(36px);
 
-.along_btn{
-	min-width: 255px;
+
+	@media(max-width: $tablet){
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 }
-
-
 
 
 a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
@@ -46,8 +59,8 @@ a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
 				max-width: 280px;
 			}
 		}
-		
 	}
+	
 	&.blue_btn{
 		@extend .tipycal_btn;
 		border-color: $dop_active;
@@ -60,8 +73,7 @@ a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
 		@extend .tipycal_btn;
 		border-color: $text_color;
 		color: $text_color;
-		background: transparent;
-		
+		background: transparent;	
 	}
 
 	&.red_btn{
@@ -69,7 +81,6 @@ a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
 		border-color: $error_color;
 		color: $error_color;
 		background: transparent;
-		
 	}
 
 	&.account_block__mail{
@@ -89,9 +100,48 @@ a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
 		text-decoration: none;
 	}
 
+	&.index_main_screen__btn{
+		@extend .index_btn;
+		border-color: $active_color;
+		background: $active_color;
+		margin-bottom: 35px;
+	}
+
+	&.index_main_screen__dop_link{
+		color: #ffffff;
+		text-decoration: underline;
+		display: block;
+		width: 320px;
+		max-width: 100%;
+		margin: 0 auto;
+		font-size: 18px;
+		line-height: 25px;
+		text-align: center;
+	}
+
+	&.orange_btn{
+		@extend .index_btn;
+		border-color: $index_active;
+		background: $index_active;
+	}
+
+	&.index_subscribe__btn{
+		@extend .index_btn;
+		border-color: $index_active;
+		background: url($base_img + 'subscribe.png') center center no-repeat;
+		background-color: $index_active;
+		@include border-radius(0);
+		width: 90px;
+
+		@media(max-width: $tablet){
+			width: 60px;
+		}
+	}
+
 }
 
 a:hover, button:hover, input[type="submit"]{
+	cursor: pointer;
 	&.green_btn{
 		background: $active_color;
 		color: #ffffff;
@@ -118,6 +168,26 @@ a:hover, button:hover, input[type="submit"]{
 
 	&.referral__link{
 		text-decoration: underline;
+	}
+
+	&.index_main_screen__btn{
+		border-color: $dop_active;
+		background-color: $dop_active;
+	}
+
+	&.index_main_screen__dop_link{
+		text-decoration: none;
+	}
+
+	&.orange_btn{
+		border-color: $active_color;
+		background-color: $active_color;
+	}
+
+	&.index_subscribe__btn{
+		border-color: $active_color;
+		background-color: $active_color;
+
 	}
 }
 

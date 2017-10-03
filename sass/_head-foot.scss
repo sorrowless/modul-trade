@@ -27,6 +27,21 @@
 		position: relative;
 		z-index: 2;
 	}
+
+	&--index{
+		background: rgba(7, 21, 69, 0.8);
+		margin-bottom: -60px;
+		min-height: 60px;
+
+		.row{
+			padding-top: 10px !important;
+			padding-bottom: 10px !important;
+		}
+
+		@media(max-width: $tablet){
+			margin-bottom: -100px;
+		}
+	}
 }
 
 .menu{
@@ -193,6 +208,59 @@
 
 	}
 
+	&--index{
+		background-color: transparent;
+		margin-left: 0;
+		height: 40px;
+		width: 120px;
+		float: none;
+		display: inline-block;
+		margin-left: 10px;
+
+		.lang__wrap{
+			background-color: transparent;
+			padding-top: 40px;
+
+			&.open{
+				background: #ffffff;
+
+				.lang__item {
+					a, a:link, a:hover, a:visited, a:active, a:focus{
+						color: $title_color;
+						background-image: none;
+					}
+				}
+
+				&:after{
+					border-top-color: $dop_active;
+				}
+			}
+
+			&:after{
+				border-top-color: #ffffff;
+				border-width: 5px;
+				top: 16px;
+			}
+
+		}
+		
+
+		.lang__item {
+			a, a:link, a:hover, a:visited, a:active, a:focus{
+				padding-left: 10px;
+				color: #ffffff;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				border: 0;
+				font-size: 13px;
+				text-align: left;
+				width: 100%;
+				background-color: transparent;
+				background-image: none;
+			}
+		}
+	}
+
 }
 
 .logo{
@@ -250,7 +318,7 @@
 		}
 	}
 
-	&--foot{
+	&--foot, &--index{
 		.soc_block__item{
 
 			@for $i from 1 through 6 {
@@ -261,6 +329,11 @@
 				}
 			}
 		}
+	}
+
+	&--index{
+		float: left;
+		margin: 6px 0;
 	}
 }
 
@@ -366,6 +439,62 @@
 
 		a:hover{
 			text-decoration: underline;
+		}
+	}
+
+	&--index{
+		background: url($base_img + 'footer_bg.jpg') top center no-repeat #ffffff;
+		padding-top: 200px;
+		min-height: 0;
+		margin-top: -25px;
+
+		@media(max-width: $tablet){
+			background-image: none;
+			padding-top: 0;
+		}
+	}
+
+	&__line{
+		&:after{
+			content:" ";
+			display:block;
+			height: 0;
+			clear: both;
+		}
+	}
+
+	&__btn{
+		width: 37%;
+		float: right;
+		text-align: center;
+
+		a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
+			// width: ;
+		}
+
+		@media(max-width: $tablet){
+			width: 100%;
+			margin-top: 40px;
+		}
+	}
+
+	&__index_text{
+		font-size: 30px;
+		font-weight: bold;
+		color: $dop_active;
+		text-align: center;
+		float: left;
+		width: 50%;
+		margin: 40px 0;
+
+		@media(max-width: $tablet){
+			font-size: 24px;
+			margin-bottom: 0;
+			margin-top: 40px;
+		}
+
+		@media(max-width: $mobile){
+			width: 100%;
 		}
 	}
 }
