@@ -87,7 +87,7 @@ input.standart, .input_standart, select.standart, .select_standart, textarea.sta
 	    // color: $placrholder_color;
 	    // font-family: 'Ubuntu', sans-serif;
 	    opacity: 0.6;
-	    color: $text_color
+	    color: $text_color;
 	 }   
 
  //    &:focus, &.not_empty{
@@ -234,7 +234,7 @@ table.standart, .standart_table{
 		width: 371px;
 		max-width: 100%;
 		float: none;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 
 		@media(max-width: $tablet){
 			margin: 0 auto;

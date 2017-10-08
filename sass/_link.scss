@@ -60,6 +60,27 @@ a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
 			}
 		}
 	}
+
+	&.index_header__main_link{
+		@extend .tipycal_btn;
+		border: 0;
+		background-color: $active_color;
+		color: #ffffff;
+		line-height: 16px;
+		padding: 7px 10px;
+		margin: 5px 50px;
+
+		@media(max-width: $tablet){
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		@media(max-width: $mobile){
+			max-width: 280px;
+			margin: 15px auto;
+			display: block;
+		}
+	}
 	
 	&.blue_btn{
 		@extend .tipycal_btn;
@@ -100,11 +121,17 @@ a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
 		text-decoration: none;
 	}
 
-	&.index_main_screen__btn{
+	&.index_main_screen__btn_color{
 		@extend .index_btn;
 		border-color: $active_color;
 		background: $active_color;
-		margin-bottom: 35px;
+	}
+
+	&.index_main_screen__btn_transparent{
+		@extend .index_btn;
+		border-color: #ffffff;
+		background: transparent;
+		color: #ffffff;
 	}
 
 	&.index_main_screen__dop_link{
@@ -170,7 +197,12 @@ a:hover, button:hover, input[type="submit"]{
 		text-decoration: underline;
 	}
 
-	&.index_main_screen__btn{
+	&.index_main_screen__btn_transparent{
+		border-color: $dop_active;
+		background-color: $dop_active;
+	}
+
+	&.index_main_screen__btn_color{
 		border-color: $dop_active;
 		background-color: $dop_active;
 	}
@@ -187,7 +219,10 @@ a:hover, button:hover, input[type="submit"]{
 	&.index_subscribe__btn{
 		border-color: $active_color;
 		background-color: $active_color;
+	}
 
+	&.index_header__main_link{
+		background-color: $index_active;
 	}
 }
 

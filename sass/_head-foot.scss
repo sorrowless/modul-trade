@@ -29,17 +29,33 @@
 	}
 
 	&--index{
-		background: rgba(7, 21, 69, 0.8);
-		margin-bottom: -60px;
-		min-height: 60px;
+		// background: rgba(7, 21, 69, 0.8);
+		background: transparent;
+		margin-bottom: -120px;
+		min-height: 120px;
 
+		// .row{
+		// 	padding-top: 10px !important;
+		// 	padding-bottom: 10px !important;
+		// }
 		.row{
-			padding-top: 10px !important;
-			padding-bottom: 10px !important;
+			padding-top: 40px !important;
+			padding-bottom: 40px !important;
+
+			@media(max-width: $tablet){
+				padding-top: 20px !important;
+				padding-bottom: 20px !important;
+			}
 		}
 
 		@media(max-width: $tablet){
-			margin-bottom: -100px;
+			// margin-bottom: -100px;
+			// min-height: 80px;
+		}
+
+		@media(max-width: $mobile){
+			margin-bottom: -180px;
+			min-height: 180px;
 		}
 	}
 }
@@ -210,24 +226,27 @@
 
 	&--index{
 		background-color: transparent;
-		margin-left: 0;
-		height: 40px;
-		width: 120px;
+		margin-top: 5px;
+		height: 30px;
+		width: 125px;
 		float: none;
 		display: inline-block;
 		margin-left: 10px;
 
 		.lang__wrap{
 			background-color: transparent;
-			padding-top: 40px;
+			padding-top: 30px;
+			height: 30px;
 
 			&.open{
 				background: #ffffff;
+				height: auto;
 
-				.lang__item {
+				.lang__item, .lang__item.active {
 					a, a:link, a:hover, a:visited, a:active, a:focus{
 						color: $title_color;
 						background-image: none;
+						background-color: transparent;
 					}
 				}
 
@@ -240,23 +259,33 @@
 				border-top-color: #ffffff;
 				border-width: 5px;
 				top: 16px;
+				display: none;
 			}
 
 		}
 		
 
 		.lang__item {
+			width: 85px;
 			a, a:link, a:hover, a:visited, a:active, a:focus{
-				padding-left: 10px;
-				color: #ffffff;
-				padding-top: 10px;
-				padding-bottom: 10px;
+				padding: 5px;
+				height: 30px;
+				line-height: 20px;
 				border: 0;
+				color: #ffffff;
 				font-size: 13px;
-				text-align: left;
+				text-align: center;
 				width: 100%;
 				background-color: transparent;
 				background-image: none;
+			}
+
+			&.active{
+				a, a:link, a:hover, a:visited, a:active, a:focus{
+					border-radius: 20px;
+					background: $active_color;
+					color: #ffffff;
+				}
 			}
 		}
 	}
@@ -334,6 +363,12 @@
 	&--index{
 		float: left;
 		margin: 6px 0;
+
+		@media(max-width: $tablet){
+			width: 100%;
+			text-align: center;
+			float: none;
+		}
 	}
 }
 

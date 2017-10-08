@@ -24,7 +24,7 @@
 		font-size: 0;
 		line-height: 0;
 
-		@media(max-width: $tablet-min){
+		@media(max-width: $mobile){
 			float: none;
 			width: 100%;
 			text-align: center;
@@ -32,15 +32,33 @@
 	}
 
 	&_main_screen{
-		background: url($base_img + 'index_main.jpg') center bottom no-repeat;
-		padding-top: 160px;
-		padding-bottom: 80px;
-		max-height: 997px;
+		background: url($base_img + 'index_main.png') center bottom no-repeat;
+		padding-top: 110px;
+		padding-bottom: 40px;
+		// min-height: 997px;
 		background-size: cover;
+		margin-bottom: -115px;
+		position: relative;
+		z-index: 5;
 
 		@media(max-width: $tablet){
 			padding-top: 120px;
-			padding-bottom: 60px;
+			padding-bottom: 0;
+			// padding-bottom: 60px;
+		}
+
+		&__discount_text{
+			text-align: center;
+			color: $active_color;
+			font-weight: 900;
+			font-size: 30px;
+			line-height: 32px;
+			margin-bottom: 45px;
+
+			@media(max-width: $mobile){
+				font-size: 24px;
+				line-height: 28px;
+			}
 		}
 
 
@@ -62,6 +80,69 @@
 				font-size: 28px;
 				line-height: 36px;
 				margin-bottom: 40px;
+			}
+		}	
+
+		&__btn_block{
+			&:after{
+				content:" ";
+				display:block;
+				height: 0;
+				clear: both;
+			}
+		}
+
+		&__btn{
+			&--left{
+				float: left;
+
+				@media(max-width: $desktop-min){
+					margin-bottom: 20px !important;
+					float: none;
+				}
+
+			}
+			&--right{
+				float: right;
+
+				@media(max-width: $desktop-min){
+					margin-bottom: 20px !important;
+					float: none;
+				}
+
+			}
+			&--center{
+				margin-bottom: -72px !important;
+
+				@media(max-width: $desktop-min){
+					margin-bottom: 20px !important;
+				}
+			}
+		}
+
+		&__big_text{
+			font-size: 36px;
+			line-height: 42px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #ffffff;
+			margin-bottom: 70px;
+
+			p{
+				margin: 0;
+				padding: 0;
+			}
+
+			@media(max-width: $tablet){
+				text-align: center;
+				font-size: 28px;
+				line-height: 32px;
+				margin-bottom: 40px;
+			}
+
+			@media(max-width: $mobile){
+				font-size: 24px;
+				line-height: 28px;
 			}
 		}
 
@@ -89,19 +170,84 @@
 		}
 	}
 
+	&_video_block{
+		background: url($base_img + 'video_block.jpg') center center no-repeat;
+		position: relative;
+		height: 524px;
+		padding-top: 200px;
+
+		a, a:link, a:hover, a:visited, a:active, a:focus{
+			display: block;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #ffffff;
+			font-size: 48px;
+			line-height: 48px;
+			padding-top: 140px;
+			margin: 0 auto;
+			max-width: 360px;
+			width: 100%;
+			position: relative;
+			text-align: center;
+
+			&:before{
+				content: ' ';
+				display: block;
+				position: absolute;
+				height: 80px;
+				width: 80px;
+				@include border-radius(50%);
+				background: $active_color;
+				top: 0;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+			}
+
+			&:after{
+				content: ' ';
+				position: absolute;
+				display: block;
+				height: 0;
+				width: 0;
+				border: solid 17px transparent;
+				border-right: 0;
+				border-left-width: 24px;
+			    border-left-color: #ffffff;
+			    position: absolute;
+			    top: 25px;
+			    margin: 0 auto;
+			    left: 7px;
+			    right: 0;
+			}
+
+			@media(max-width: $tablet){
+				font-size: 32px;
+				line-height: 32px;
+			}
+		}
+	}
+
 	&_login{
 		display: inline-block;
 		vertical-align: top;
+		&:after{
+			content: '|';
+			color: #ffffff;
+			font-size: 14px;
+			padding-left: 20px;
+		}
 
 		a, a:link, a:hover, a:visited, a:active, a:focus{
-			padding-left: 25px;
+			// padding-left: 25px;
 			color: #ffffff;
 			font-size: 13px;
 			line-height: 20px;
 			margin: 10px 0;
-			display: block;
+			display: inline-block;
 
-			background: url($base_img + 'login.png') left center no-repeat;
+			// background: url($base_img + 'login.png') left center no-repeat;
 		}
 	}
 
@@ -111,14 +257,14 @@
 		margin-left: 20px;
 
 		a, a:link, a:hover, a:visited, a:active, a:focus{
-			padding-left: 25px;
+			// padding-left: 25px;
 			color: #ffffff;
 			font-size: 13px;
 			line-height: 20px;
 			margin: 10px 0;
-			display: block;
+			display: inline-block;
 
-			background: url($base_img + 'regisration.png') left center no-repeat;
+			// background: url($base_img + 'regisration.png') left center no-repeat;
 		}
 	}
 	
