@@ -14,6 +14,10 @@
 		}
 	}
 
+	&_dop_bg{
+		background: url($base_img + 'dop_bg.png') left top no-repeat;
+	}
+
 	.main_content{
 		background: #ffffff;
 	}
@@ -797,7 +801,7 @@
 			width: 33.3%;
 			text-align: center;
 			padding: 20px;
-			padding-top: 70px;
+			padding-top: 90px;
 
 			@media(max-width: $desktop){
 				width: 50%;
@@ -819,9 +823,9 @@
 			display: inline-block;
 			@include border-radius(7px);
 			@include box-shadow( 0 0 12px $bxsh_color);
-			background: rgba(220, 245, 253, 0.8);
+			background: rgba(220, 245, 253, 0.1);
 			padding: 40px 10px;
-			padding-top: 60px;
+			padding-top: 80px;
 			min-height: 860px;
 
 			@media(max-width: $desktop){
@@ -836,9 +840,9 @@
 
 		&__icon{
 			position: absolute;
-			top: -50px;
-			width: 100px;
-			height: 100px;
+			top: -72px;
+			width: 144px;
+			height: 144px;
 			@include border-radius(50%);
 			background: center center no-repeat $title_color;
 			left: 0;
@@ -876,7 +880,7 @@
 			font-size: 28px;
 			font-weight: normal;
 			text-align: center;
-			color: $title_color;
+			color: #ffffff;
 			line-height: 35px;
 
 			@media(max-width: $tablet){
@@ -887,6 +891,7 @@
 			&--title{
 				font-weight: bold;
 				margin-bottom: 10px;
+				color: $title_color;
 			}
 
 			& + .index_project__text--title{
@@ -895,6 +900,118 @@
 				@media(max-width: $tablet){
 					margin-top: 20px;
 				}
+			}
+		}
+	}
+
+	&_team{
+		background: url($base_img + 'index_team.jpg') center top no-repeat, url($base_img + 'index_team__bot.jpg') center bottom no-repeat, url($base_img + 'index_team__right.jpg') center right no-repeat, url($base_img + 'index_team__left.jpg') center left no-repeat ;
+		padding-bottom: 160px;
+
+		@media(max-width: $desktop){
+			background: url($base_img + 'index_team.jpg') center top no-repeat, url($base_img + 'index_team__bot.jpg') center bottom no-repeat;
+		}
+
+		&__wrap{
+			&:after{
+				content:" ";
+				display:block;
+				height: 0;
+				clear: both;
+			}
+		}
+
+		&__block_wrap{			
+			width: 33.3%;
+			float: left;
+
+			@media(max-width: $tablet){
+				width: 50%;
+			}
+
+			@media(max-width: $mobile){
+				width: 100%;
+			}
+		}
+
+		&__block{
+			padding: 45px 30px;
+			max-width: 320px;
+			margin: 0 auto;
+			&:hover{
+				@include box-shadow( 0 0px 8px $bxsh_color);
+			}
+		}
+
+		&__item{
+			text-decoration: none;
+			display: block;
+
+			&:hover{
+				text-decoration: none;
+			}
+
+			&:after{
+				content:" ";
+				display:block;
+				height: 0;
+				clear: both;
+			}
+		}
+
+		&__photo{
+			@include border-radius(50%);
+			float: right;
+			height: 85px;
+			width: 85px;
+		}
+
+		&__name{
+			font-size: 24px;
+			color: $title_color;
+			font-weight: bold;
+			line-height: 30px;
+			margin-bottom: 5px;
+		}
+
+		&__work{
+			font-size: 18px;
+			color: $title_color;
+			
+			span{
+				display: block;
+			}
+		}
+
+		&__linkedin{
+			margin: 10px 0 15px 0;
+
+			a, a:link, a:hover, a:visited, a:active, a:focus{
+				text-decoration: none;
+				height: 24px;
+				width: 24px;
+				background: $active_color;
+				color: #ffffff;
+				font-size: 20px;
+				display: block;
+				line-height: 24px;
+				text-align: center;
+				@include border-radius(50%);
+			}
+
+			@media(max-width: $mobile){
+				display: none;
+			}
+		}
+
+		&__text{
+			font-size: 18px;
+			text-decoration: underline;
+			color: $title_color;
+			line-height: 24px;
+
+			@media(max-width: $mobile){
+				display: none;
 			}
 		}
 	}
