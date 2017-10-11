@@ -560,5 +560,10 @@
 }
 
 .darck_bg{
-	background: $title_color;
+	background: url($base_img + 'darck_bg.jpg') center center no-repeat #010e45;
+	background-size: 100% 100%;
+
+	@media(max-width: $tablet){
+		background-image: none;
+	} 
 }
