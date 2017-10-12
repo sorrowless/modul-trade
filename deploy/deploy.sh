@@ -19,4 +19,4 @@ echo "Add decoded key to the ssh agent keystore"
 eval `ssh-agent -s`
 ssh-add $OUT_KEY
 
-rsync -avi --exclude "$OUT_KEY" ./ travis@52.178.66.16:/tmp/modul_trade/
+rsync -avi --exclude "$OUT_KEY" ./ travis@52.178.66.16:/var/www/modul_trade/
