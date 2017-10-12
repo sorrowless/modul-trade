@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e  # Exit with non-zero if anything fails
 
+# We do Travis check only for this branch
 BUILD_BRANCH="master"
 
 # Do not build a new version if it is a pull-request or commit not to BUILD_BRANCH
