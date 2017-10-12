@@ -1,14 +1,6 @@
 #!/bin/bash
 set -e  # Exit with non-zero if anything fails
 
-BUILD_BRANCH="master"
-
-# Do not build a new version if it is a pull-request or commit not to BUILD_BRANCH
-if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$BUILD_BRANCH" ]; then
-    echo "Not $BUILD_BRANCH, skipping deploy;"
-    exit 0
-fi
-
 echo "Prepare the key..."
 # Encryption key is a key stored in travis itself
 OUT_KEY="id_rsa"
