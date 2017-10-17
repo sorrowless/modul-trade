@@ -8,12 +8,24 @@
 
 		& + .row{
 			padding-top: 0 !important;
+
+			&--top_line{
+				padding-top: 80px !important;
+			}
 		}
 
 		@media(max-width: $tablet){
 			padding-top: 50px;
 			padding-bottom: 50px;
 		}
+
+		&--top_line{
+			border-top: solid 1px #f4f4f4;
+		}
+	}
+
+	.container{
+		position: relative;
 	}
 
 	&_dop_bg{
@@ -862,6 +874,31 @@
 		}
 	}
 
+	&__token_bg{
+		&:after{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: url($base_img + 'footer_bg.jpg') center bottom no-repeat;
+			height: 322px;
+			z-index: 0;
+			display: block;
+			content: ' ';
+		}
+		&:before{
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			right: 0;
+			background: url($base_img + 'index_team__bot.jpg') center bottom no-repeat;
+			height: 330px;
+			z-index: 0;
+			display: block;
+			content: ' ';
+		}
+		
+	}
 	&_project{
 		background: url($base_img + 'project.jpg') right bottom no-repeat;
 		background-color: #0396d9;
@@ -889,6 +926,18 @@
 			@media(max-width: $tablet){
 				display: none;
 			}
+		}
+
+		&:after{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: url($base_img + 'index_team.jpg') center top no-repeat;
+			height: 330px;
+			display: block;
+			content: ' ';
+			z-index: 0;
 		}
 
 		&__block{
@@ -1011,12 +1060,13 @@
 		}
 	}
 
+
 	&_team{
-		background: url($base_img + 'index_team.jpg') center top no-repeat, url($base_img + 'index_team__bot.jpg') center bottom no-repeat, url($base_img + 'index_team__right.jpg') center right no-repeat, url($base_img + 'index_team__left.jpg') center left no-repeat ;
+		background:  url($base_img + 'index_team__right.jpg') center right no-repeat, url($base_img + 'index_team__left.jpg') center left no-repeat ;
 		padding-bottom: 160px;
 
 		@media(max-width: $desktop){
-			background: url($base_img + 'index_team.jpg') center top no-repeat, url($base_img + 'index_team__bot.jpg') center bottom no-repeat;
+			background:none;
 		}
 
 		&__wrap{
@@ -1172,7 +1222,7 @@
 	}
 
 	&_roadmap{
-		background: url($base_img + 'footer_bg.jpg') top center no-repeat #ffffff;
+		// background: url($base_img + 'footer_bg.jpg') top center no-repeat #ffffff;
 
 		&__img{
 			text-align: center;
@@ -1327,3 +1377,81 @@
 	}
 }
 
+
+.users_amount{
+	margin-bottom: -30px;
+
+	&:after{
+		content:" ";
+		display:block;
+		height: 0;
+		clear: both;
+	}
+
+	&__block{
+		width: 33.3%;
+		float: left;
+		padding: 30px 20px;
+		text-align: center;
+
+		@media(max-width: $tablet){
+			width: 100%;
+		}
+	}
+
+	&__text{
+		color: $title_color;
+		font-size: 36px;
+		font-weight: bold;
+		line-height: 40px;
+		margin-top: 40px;
+
+		i{	
+			font-weight: normal;
+			font-size: 24px;
+			// padding-right: 10px;
+			line-height: 36px;
+			vertical-align: top;
+		}
+
+		@media(max-width: $tablet){
+			font-size: 28px;
+			margin-top: 20px;
+		}
+	}
+
+	&__chart{
+		height: 220px;
+		width: 220px;
+		position: relative;
+		margin: 0 auto;
+		border: solid 20px #d5d5d5;
+		text-align: center;
+		vertical-align: middle; 
+		@include border-radius(50%) ;
+	}
+
+	&__chart_text{
+		color: $dop_active;
+		font-size: 48px;
+		font-weight: bold;
+		line-height: 180px;
+		position: relative;
+		z-index: 3;
+	}
+
+	&__chart_line{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 180px;
+		width: 180px;
+		z-index: 1;
+	}
+
+	canvas{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
