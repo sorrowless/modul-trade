@@ -81,6 +81,18 @@ a, a:link, a:hover, a:visited, a:active, a:focus, button, input[type="submit"]{
 			display: block;
 		}
 	}
+
+	&.footer_main__link{
+		@extend .tipycal_btn;
+		border: 0;
+		background-color: $active_color;
+		color: #ffffff;
+		line-height: 16px;
+		padding: 5px 10px;
+		display: inline-block !important;
+		margin-bottom: 20px;
+		width: auto;
+	}
 	
 	&.blue_btn{
 		@extend .tipycal_btn;

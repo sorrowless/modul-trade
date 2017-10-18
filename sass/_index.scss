@@ -412,7 +412,7 @@
 		}
 
 		&__img{
-			height: 92px;
+			height: 90px;
 			margin: 20px 0;
 			text-align: center;
 
@@ -1060,7 +1060,6 @@
 		}
 	}
 
-
 	&_team{
 		background:  url($base_img + 'index_team__right.jpg') center right no-repeat, url($base_img + 'index_team__left.jpg') center left no-repeat ;
 		padding-bottom: 160px;
@@ -1379,7 +1378,9 @@
 
 
 .users_amount{
-	margin-bottom: -30px;
+	margin: 50px -40px;
+	text-align: center;
+	margin-bottom: 0;
 
 	&:after{
 		content:" ";
@@ -1388,23 +1389,86 @@
 		clear: both;
 	}
 
+	&--trade{
+		.users_amount__block{
+			@include box-shadow( 0 5px 10px $bxsh_color);
+		}
+	}
+
+	@media(max-width: $mobile){
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	&__block{
-		width: 33.3%;
-		float: left;
-		padding: 30px 20px;
+		// width: 33.3%;
+		// float: left;
+		display: inline-block;
+		width: 320px;
+		margin: 20px 40px;
+		margin-bottom: 80px;
+		padding: 20px;
+		padding-top: 35px;
+		@include border-radius(5px);
+		position: relative;
 		text-align: center;
+		@include box-shadow( 0 -5px 10px $bxsh_color);
+		background: #ffffff;
+
+		@media(max-width: $desktop){
+			width: 265px;
+		}
+
+		.load{
+			position: absolute;
+			bottom: -40px;
+			left: 0;
+		    right: 0;
+		    margin: 0 auto;
+		}
 
 		@media(max-width: $tablet){
+		}
+
+		@media(max-width: $mobile){
 			width: 100%;
+			max-width: 320px;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&:last-of-type{
+			&:before{
+				display: none;
+			}
+		}
+
+		&:before{
+			content: ' ';
+			background: url($base_img + 'users_amount/users_amount__next.png') center center no-repeat;
+			display: block;
+			width: 95px;
+			height: 14px;
+			position: absolute;
+			bottom: 32px;
+			left: 100%;
+			margin-left: -6px;
+			z-index: 2;
+
+			@media(max-width: $desktop-min){
+				display: none;
+			}
 		}
 	}
 
 	&__text{
 		color: $title_color;
+		color: $dop_active;
 		font-size: 36px;
 		font-weight: bold;
 		line-height: 40px;
-		margin-top: 40px;
+		// margin-top: 40px;
+		margin-top: 20px;
 
 		i{	
 			font-weight: normal;
@@ -1425,10 +1489,10 @@
 		width: 220px;
 		position: relative;
 		margin: 0 auto;
-		border: solid 20px #d5d5d5;
+		// border: solid 20px #d5d5d5;
 		text-align: center;
 		vertical-align: middle; 
-		@include border-radius(50%) ;
+		// @include border-radius(50%) ;
 	}
 
 	&__chart_text{
@@ -1447,6 +1511,16 @@
 		height: 180px;
 		width: 180px;
 		z-index: 1;
+	}
+
+	&__chart_img{
+		width: 161px;
+		margin: 0 auto;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	canvas{

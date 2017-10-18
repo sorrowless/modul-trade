@@ -408,18 +408,28 @@
 		background-image: none;
 	}
 
+	&__col_wrap{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
 	&__text{
-		text-align: center;
-		padding: 18px 320px;
-		font-size: 14px;
-		line-height: 20px;
+		// text-align: center;
+		// padding: 18px 320px;
+		font-size: 18px;
+		line-height: normal;
 		color: #ffffff;
 
-		@media(max-width: $desktop){
-			float: left;
-			padding-left: 0;
-			padding-right: 0;
-			width: 100%;
+		// @media(max-width: $desktop){
+			// float: left;
+			// padding-left: 0;
+			// padding-right: 0;
+			// width: 100%;
+
+		@media(max-width: $tablet){
+
+			font-size: 16px;
+			text-align: center;
 		}
 
 		&:after{
@@ -431,17 +441,18 @@
 	}
 
 	&__contact{
-		float: left;
+		// float: left;
+		// text-align: left;
+
+		// @media(max-width: $desktop){
+		// 	float: right;
+		// }
+
+		// @media(max-width: $mobile){
+		// 	width: 100%;
+		// 	text-align: center;
+		// }
 		text-align: left;
-
-		@media(max-width: $desktop){
-			float: right;
-		}
-
-		@media(max-width: $mobile){
-			width: 100%;
-			text-align: center;
-		}
 		p{
 			margin: 0;
 		}
@@ -478,14 +489,32 @@
 	}
 
 	&--index{
-		background: url($base_img + 'footer_bg.jpg') top center no-repeat #ffffff;
-		padding-top: 200px;
+		// background: url($base_img + 'footer_bg.jpg') top center no-repeat #ffffff;
+		// padding-top: 200px;
+		background: none;
 		min-height: 0;
-		margin-top: -25px;
+		// margin-top: -25px;
 
 		@media(max-width: $tablet){
 			background-image: none;
 			padding-top: 0;
+		}
+
+
+
+		.darck_bg{
+
+			&:before{
+				position: absolute;
+				bottom: 100%;
+				left: 0;
+				right: 0;
+				background: url($base_img + 'index_team__bot.jpg') center bottom no-repeat;
+				height: 330px;
+				z-index: 0;
+				display: block;
+				content: ' ';
+			}
 		}
 	}
 
@@ -495,6 +524,10 @@
 			display:block;
 			height: 0;
 			clear: both;
+		}
+
+		&--subscribe{
+			padding: 110px 0 190px 0;
 		}
 	}
 
@@ -531,6 +564,37 @@
 		@media(max-width: $mobile){
 			width: 100%;
 		}
+	}
+
+	&__col{
+		width: 50%;
+		float: left;
+		padding: 20px 0;
+
+		.soc_block{
+			float: none;
+			text-align: left;
+
+			@media(max-width: $mobile){
+				text-align: center;
+			}
+		}
+		
+		&--right{
+			float: right; 
+		}
+
+		@media(max-width: $tablet){
+			width: 100%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+
+	&__dop_text{
+		font-size: 16px;
+		color: $dop_active;
+		line-height: normal;
 	}
 }
 
